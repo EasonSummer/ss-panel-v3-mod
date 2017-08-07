@@ -75,7 +75,8 @@
 								<div class="card-inner">
 									<div class="card-inner">
 										<p class="card-heading">加密方式修改</p>
-										<p>注意：SS 和 SSR 支持的加密方式有所不同，请根据实际情况来进行选择！</p>
+										<p>注意1：SS 和 SSR 支持的加密方式有所不同，请根据实际情况来进行选择！</p>
+										<p>注意2: 不会立刻生效，大约需要2分钟！</p>
 										<p>当前加密方式：{$user->method}</p>
 										<div class="form-group form-group-label">
 											<label class="floating-label" for="method">加密方式</label>
@@ -154,8 +155,8 @@
 									<div class="card-inner">
 										<p class="card-heading">协议&混淆设置</p>
 										<p>当前协议：{$user->protocol}</p>
-										<p>注意1：如果需要兼容原版SS请选择带_compatible的兼容选项！</p>
-										<p>注意2：如果您使用原版 SS 客户端此处请直接设置为 origin！</p>
+										<p>注意1：注意区分SS和SSR协议和混淆！</p>
+										<p>注意2：不会立刻生效，大约等待2分钟！</p>
 										<div class="form-group form-group-label">
 											<label class="floating-label" for="protocol">协议</label>
 											<select id="protocol" class="form-control">
@@ -170,8 +171,6 @@
 
 									<div class="card-inner">
 										<p>当前混淆方式：{$user->obfs}</p>
-										<p>注意1：如果需要兼容原版SS请选择带_compatible的兼容选项！</p>
-										<p>注意2：SS 和 SSR 支持的混淆类型有所不同，simple_obfs_* 为原版 SS 的混淆方式，其他为 SSR 的混淆方式！</p>
 										<div class="form-group form-group-label">
 											<label class="floating-label" for="obfs">混淆方式</label>
 											<select id="obfs" class="form-control">
@@ -312,46 +311,6 @@
 											<a class="btn btn-brand-accent btn-flat waves-attach" href="/user/gareset" ><span class="icon">format_color_reset</span>&nbsp;重置</a>
 											<button class="btn btn-flat waves-attach" id="ga-test" ><span class="icon">extension</span>&nbsp;测试</button>
 											<button class="btn btn-brand btn-flat waves-attach" id="ga-set" ><span class="icon">perm_data_setting</span>&nbsp;设置</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="card margin-bottom-no">
-							<div class="card-main">
-								<div class="card-inner">
-									<div class="card-inner">
-										<p class="card-heading">重置端口</p>
-										<p>当前端口：{$user->port}</p>
-
-									</div>
-									<div class="card-action">
-										<div class="card-action-btn pull-left">
-											<button class="btn btn-flat waves-attach" id="portreset" ><span class="icon">check</span>&nbsp;重置端口</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="card margin-bottom-no">
-							<div class="card-main">
-								<div class="card-inner">
-									<div class="card-inner">
-										<p class="card-heading">自定义ACL/PAC/Surge</p>
-										<p>您可以在此处追加 Gfwlist 规则。</p>
-										<p>格式参看<a href="https://adblockplus.org/zh_CN/filters">https://adblockplus.org/zh_CN/filters</a></p>
-										<p>IP 段请使用 |127.0.0.0/8 类似格式表示</p>
-										<div class="form-group form-group-label">
-											<label class="floating-label" for="pac">规则书写区</label>
-											<textarea class="form-control" id="pac" rows="8">{$user->pac}</textarea>
-										</div>
-
-									</div>
-									<div class="card-action">
-										<div class="card-action-btn pull-left">
-											<button class="btn btn-flat waves-attach" id="setpac" ><span class="icon">check</span>&nbsp;设置</button>
 										</div>
 									</div>
 								</div>
